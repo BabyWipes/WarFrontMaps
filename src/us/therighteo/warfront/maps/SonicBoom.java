@@ -17,7 +17,7 @@ public class SonicBoom extends Map {
         setGamemodeTypes(new GamemodeType[]{GamemodeType.FFA, GamemodeType.OUTBREAK});
         setDisabledDrops(new Material[]{Material.IRON_SWORD, Material.LEATHER_BOOTS, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE,
                 Material.LEATHER_HELMET, Material.BOW, Material.ARROW});
-        setAllowBuild(true, true);
+        setAllowBuild(false, false);
         setTimeLockTime(14000L);
         defineTeam1("Survivors", ChatColor.YELLOW);
     }
