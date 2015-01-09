@@ -15,7 +15,7 @@ public class SonicBoom extends Map {
         setMapName("Sonic Boom");
         setCreators(new String[]{"S4Y"});
         setGamemodeTypes(new GamemodeType[]{GamemodeType.FFA, GamemodeType.OUTBREAK});
-        setDisabledDrops(new Material[]{Material.IRON_SWORD, Material.LEATHER_BOOTS, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE,
+        setDisabledDrops(new Material[]{Material.STONE_SWORD, Material.LEATHER_BOOTS, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE,
                 Material.LEATHER_HELMET, Material.BOW, Material.ARROW});
         setAllowBuild(false, false);
         setTimeLockTime(14000L);
@@ -56,9 +56,8 @@ public class SonicBoom extends Map {
 
         inv.setItem(0, new ItemStack(Material.STONE_SWORD, 1));
         inv.setItem(1, new ItemStack(Material.BOW, 1));
-        inv.setItem(2, new ItemStack(Material.IRON_PICKAXE, 1));
-        inv.setItem(3, new ItemStack(Material.COOKED_BEEF, 6));
-        inv.setItem(4, new ItemStack(Material.GOLDEN_APPLE, 2));
+        inv.setItem(2, new ItemStack(Material.COOKED_BEEF, 6));
+        inv.setItem(3, new ItemStack(Material.GOLDEN_APPLE, 2));
         inv.setItem(9, new ItemStack(Material.ARROW, 32));
     }
 }
