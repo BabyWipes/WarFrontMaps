@@ -22,7 +22,7 @@ public class FairwickVillage extends Map {
     public void readyAttributes() {
         setMapName("Fairwick Village");
         setCreators(new String[]{"S4Y", "ninsai", "ep1cn00bt00b"});
-        setGamemodeTypes(new GamemodeType[]{GamemodeType.CTF});
+        setGamemodeTypes(new GamemodeType[]{GamemodeType.CTF, GamemodeType.LTS});
         setDefaultDisabledDrops();
         setAllowPlace(false);
         setTimeLockTime(14000L);

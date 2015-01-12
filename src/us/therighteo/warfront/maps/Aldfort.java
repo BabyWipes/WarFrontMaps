@@ -24,7 +24,7 @@ public class Aldfort extends Map {
     public void readyAttributes() {
         setMapName("Aldfort");
         setCreators(new String[]{"S4Y"});
-        setGamemodeTypes(new GamemodeType[]{GamemodeType.FFA});
+        setGamemodeTypes(new GamemodeType[]{GamemodeType.FFA, GamemodeType.LMS, GamemodeType.OUTBREAK});
         setDefaultDisabledDrops();
         setAllowBuild(false, false);
         setTimeLockTime(15000L);

@@ -14,7 +14,7 @@ public class SonicBoom extends Map {
     public void readyAttributes() {
         setMapName("Sonic Boom");
         setCreators(new String[]{"S4Y"});
-        setGamemodeTypes(new GamemodeType[]{GamemodeType.FFA, GamemodeType.OUTBREAK});
+        setGamemodeTypes(new GamemodeType[]{GamemodeType.FFA, GamemodeType.OUTBREAK, GamemodeType.LMS});
         setDisabledDrops(new Material[]{Material.STONE_SWORD, Material.LEATHER_BOOTS, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE,
                 Material.LEATHER_HELMET, Material.BOW, Material.ARROW});
         setAllowBuild(false, false);
