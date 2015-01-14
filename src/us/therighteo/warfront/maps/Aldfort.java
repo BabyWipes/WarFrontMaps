@@ -57,8 +57,8 @@ public class Aldfort extends Map {
         ItemStack IRON_BOOTS = new ItemStack(Material.IRON_BOOTS, 1);
         IRON_BOOTS.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 10);
 
-        inv.setHelmet(colorArmor(new ItemStack(Material.LEATHER_HELMET, 1), target.getCurrentTeam()));
-        inv.setChestplate(colorArmor(new ItemStack(Material.LEATHER_CHESTPLATE, 1), target.getCurrentTeam()));
+        inv.setHelmet(new ItemStack(Material.IRON_HELMET, 1));
+        inv.setChestplate(new ItemStack(Material.IRON_CHESTPLATE, 1));
         inv.setLeggings(new ItemStack(Material.IRON_LEGGINGS, 1));
         inv.setBoots(new ItemStack(Material.IRON_BOOTS, 1));
 
