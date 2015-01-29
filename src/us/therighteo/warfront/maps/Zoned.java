@@ -59,7 +59,7 @@ public class Zoned extends Map {
         inv.setItem(1, new ItemStack(Material.BOW, 1));
         inv.setItem(2, new ItemStack(Material.COOKED_BEEF, 6));
         inv.setItem(3, new ItemStack(Material.GOLDEN_APPLE, 1));
-        inv.setItem(7, new ItemStack(Material.ENDER_PEARL, 1));
+        inv.setItem(7, new ItemStack(Material.ENDER_PEARL, 3));
         inv.setItem(8, GADGET);
         inv.setItem(9, new ItemStack(Material.ARROW, 32));
     }
