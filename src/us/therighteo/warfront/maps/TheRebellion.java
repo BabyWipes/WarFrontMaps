@@ -43,8 +43,6 @@ public class TheRebellion extends Map {
 
         protectedCuboids.add(new ProtectedCuboid(-25, 89, 10, -28, 91, 13, "TEAM_2"));
         protectedCuboids.add(new ProtectedCuboid(-15, 88, 37, -12, 91, 40, "TEAM_2"));
-        protectedCuboids.add(new ProtectedCuboid(-72, 135, 100, -72, 132, 100, "TEAM_1"));
-        protectedCuboids.add(new ProtectedCuboid(-112, 135, 48, -112, 132, 48, "TEAM_1"));
         protectedCuboids.add(new ProtectedCuboid(-64, 140, 103, -71, 152, 97, "TEAM_1"));
         protectedCuboids.add(new ProtectedCuboid(-109, 140, 40, -115, 152, 47, "TEAM_1"));
 

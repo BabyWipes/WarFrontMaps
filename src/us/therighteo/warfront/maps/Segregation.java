@@ -13,6 +13,7 @@ import us.therighteo.warfront.WFP;
 import us.therighteo.warfront.gamemode.GamemodeType;
 import us.therighteo.warfront.gamemode.Map;
 import us.therighteo.warfront.gamemode.util.CylinderMapRegion;
+import us.therighteo.warfront.gamemode.util.Monument;
 import us.therighteo.warfront.gamemode.util.ProtectedCuboid;
 import us.therighteo.warfront.gamemode.util.SerializedLocation;
 
@@ -24,28 +25,29 @@ public class Segregation extends Map {
     public void readyAttributes() {
         setMapName("Segregation");
         setCreators(new String[]{"_Moist", "S4Y", "MiCkEyMiCE", "dashhhb", "AnomalousDyna"});
-        setGamemodeTypes(new GamemodeType[]{GamemodeType.TDM});
+        setGamemodeTypes(new GamemodeType[]{GamemodeType.TDM, GamemodeType.GTM});
         setDisabledDrops(new Material[]{Material.STONE_SWORD, Material.LEATHER_HELMET, Material.LEATHER_CHESTPLATE, Material.GOLD_LEGGINGS,
                 Material.GOLD_BOOTS, Material.BREAD, Material.LOG, Material.BOW, Material.ARROW, Material.IRON_HELMET,
                 Material.IRON_CHESTPLATE, Material.IRON_LEGGINGS, Material.IRON_BOOTS, Material.STONE_AXE, Material.STONE_PICKAXE,
                 Material.IRON_PICKAXE, Material.IRON_AXE, Material.IRON_SWORD});
         setAllowBuild(true, true);
         setTimeLockTime(15000L);
-        defineTeam1("Orange Team", ChatColor.GOLD);
-        defineTeam2("Dark Team", ChatColor.DARK_GRAY);
+        defineTeam1("Dark Team", ChatColor.DARK_GRAY);
+        defineTeam2("Orange Team", ChatColor.GOLD);
     }
 
     protected void readySpawns() {
-        team1Spawns.add(new SerializedLocation(43, 78, 51, 218F, 2.2F));
-        team2Spawns.add(new SerializedLocation(-45, 78, -52, 37.6F, 1.4F));
+        team2Spawns.add(new SerializedLocation(43, 78, 51, 218F, 2.2F));
+        team1Spawns.add(new SerializedLocation(-45, 78, -52, 37.6F, 1.4F));
 
         spectatorSpawns.add(new SerializedLocation(-38, 72, 36, 248F, 1.4F));
         spectatorSpawns.add(new SerializedLocation(35, 72, -37, 64.3F, -6.3F));
 
-        protectedCuboids.add(new ProtectedCuboid(36, 74, 58, 47, 86, 46, "TEAM_1"));
-        protectedCuboids.add(new ProtectedCuboid(-40, 74, -59, -49, 86, -47, "TEAM_2"));
+        protectedCuboids.add(new ProtectedCuboid(36, 74, 58, 47, 86, 46, "TEAM_2"));
+        protectedCuboids.add(new ProtectedCuboid(-40, 74, -59, -49, 86, -47, "TEAM_1"));
 
         cylRegions.add(new CylinderMapRegion(new SerializedLocation(-1, 55, 0), 75));
+        setMonument(new Monument(-69, 72, 10, -68, 79, 15, Material.STAINED_CLAY));
     }
 
     protected void applyInventory(WFP target) {
