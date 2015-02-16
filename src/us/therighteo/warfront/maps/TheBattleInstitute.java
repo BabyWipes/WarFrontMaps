@@ -27,6 +27,13 @@ import java.util.Random;
 
 public class TheBattleInstitute extends Map {
 
+    ArrayList<String> t1 = new ArrayList<String>();
+    ArrayList<String> t2 = new ArrayList<String>();
+    String ct1 = "None";
+    String ct2 = "None";
+    boolean e1 = false;
+    boolean e2 = false;
+
     public void readyAttributes() {
         setMapName("The Battle Institute");
         setCreators(new String[]{"S4Y", "dashhhb"});
@@ -50,15 +57,6 @@ public class TheBattleInstitute extends Map {
     protected void applyInventory(WFP target) {
         target.sendMessage(ChatColor.GOLD + "Welcome to The Battle Institute! Please wait until you are called to battle!");
     }
-
-    ArrayList<String> t1 = new ArrayList<String>();
-    ArrayList<String> t2 = new ArrayList<String>();
-
-    String ct1 = "None";
-    String ct2 = "None";
-
-    boolean e1 = false;
-    boolean e2 = false;
 
     @Override
     public void reset() {
