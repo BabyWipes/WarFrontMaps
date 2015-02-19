@@ -17,7 +17,7 @@ public class Squared extends Map {
         setCreators(new String[]{"S4Y", "jakemake2"});
         setGamemodeTypes(new GamemodeType[]{GamemodeType.TDM});
         setDisabledDrops(new Material[]{Material.IRON_SWORD, Material.LEATHER_BOOTS, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE,
-                Material.LEATHER_HELMET, Material.GLASS_BOTTLE, Material.LOG, Material.BOW, Material.ARROW});
+                Material.LEATHER_HELMET, Material.GLASS_BOTTLE, Material.LOG, Material.BOW, Material.ARROW, Material.IRON_PICKAXE});
         setAllowBuild(true, true);
         setTimeLockTime(6000L);
         defineTeam1("Red Team", ChatColor.RED);

@@ -21,7 +21,7 @@ public class ConvenienceWars extends Map {
         setCreators(new String[]{"OptifineBanner", "S4Y", "dashhhb", "_StaticMC_"});
         setGamemodeTypes(new GamemodeType[]{GamemodeType.LTS, GamemodeType.DDM});
         setDisabledDrops(new Material[]{Material.STONE_SWORD, Material.LEATHER_HELMET, Material.LEATHER_CHESTPLATE, Material.GOLD_LEGGINGS,
-                Material.GOLD_BOOTS, Material.PUMPKIN_PIE, Material.LOG, Material.BOW, Material.ARROW, Material.IRON_HELMET,
+                Material.CHAINMAIL_BOOTS, Material.PUMPKIN_PIE, Material.LOG, Material.BOW, Material.ARROW, Material.IRON_HELMET,
                 Material.IRON_CHESTPLATE, Material.IRON_LEGGINGS, Material.IRON_BOOTS, Material.STONE_AXE, Material.STONE_PICKAXE,
                 Material.IRON_PICKAXE, Material.IRON_AXE, Material.IRON_SWORD});
         setAllowBuild(false, false);
