@@ -56,10 +56,11 @@ public class SquaredII extends Map {
         inv.setItem(0, new ItemStack(Material.IRON_SWORD, 1));
         inv.setItem(1, new ItemStack(Material.BOW, 1));
         inv.setItem(2, new ItemStack(Material.IRON_PICKAXE, 1));
-        inv.setItem(3, new ItemStack(Material.COOKED_BEEF, 6));
-        inv.setItem(4, new ItemStack(Material.POTION, 2, (short) 8229));
-        inv.setItem(5, new ItemStack(Material.LOG, 16));
-        inv.setItem(8, InvUtil.setLore(new ItemStack(Material.FEATHER, 1), ChatColor.BLUE + "Soft-lander"));
+        inv.setItem(3, new ItemStack(Material.IRON_AXE, 1));
+        inv.setItem(4, new ItemStack(Material.COOKED_BEEF, 6));
+        inv.setItem(5, new ItemStack(Material.POTION, 2, (short) 8229));
+        inv.setItem(6, new ItemStack(Material.LOG, 16));
+        inv.setItem(7, InvUtil.setLore(new ItemStack(Material.FEATHER, 1), ChatColor.BLUE + "Soft-lander"));
         inv.setItem(9, new ItemStack(Material.ARROW, 32));
     }
 
