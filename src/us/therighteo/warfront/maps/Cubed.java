@@ -15,14 +15,14 @@ import us.therighteo.warfront.gamemode.util.ProtectedCuboid;
 import us.therighteo.warfront.gamemode.util.SerializedLocation;
 import us.therighteo.warfront.util.InvUtil;
 
-public class SquaredII extends Map {
+public class Cubed extends Map {
 
     public void readyAttributes() {
-        setMapName("Squared II");
+        setMapName("Cubed");
         setCreators(new String[]{"S4Y", "x15", "Wulix", "Pinkanite"});
         setGamemodeTypes(new GamemodeType[]{GamemodeType.GTM, GamemodeType.TDM});
         setDisabledDrops(new Material[]{Material.IRON_SWORD, Material.LEATHER_BOOTS, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE,
-                Material.LEATHER_HELMET, Material.GLASS_BOTTLE, Material.LOG, Material.BOW, Material.ARROW, Material.IRON_PICKAXE, Material.FEATHER});
+                Material.LEATHER_HELMET, Material.GLASS_BOTTLE, Material.LOG, Material.BOW, Material.ARROW, Material.IRON_PICKAXE, Material.IRON_AXE, Material.FEATHER});
         setAllowBuild(true, true);
         setTimeLockTime(14500L);
         setRemainRequirement(0);
