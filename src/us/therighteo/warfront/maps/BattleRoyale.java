@@ -70,7 +70,7 @@ public class BattleRoyale extends Map {
         setTimeLockTime(14500L);
         defineTeam1("Purple Team", ChatColor.DARK_PURPLE);
         defineTeam2("Cyan Team", ChatColor.DARK_AQUA);
-        setDisabledDrops(Material.values());
+        disableKitClassDrops();
     }
 
     protected void readySpawns() {
@@ -442,14 +442,11 @@ public class BattleRoyale extends Map {
                 SPY_WATCH.setItemMeta(spyWatchMeta);
 
                 player.getInventory().removeItem(SPY_WATCH);
-                player.getInventory().setHelmet(new ItemStack(Material.AIR, 1));
-                player.getInventory().setChestplate(new ItemStack(Material.AIR, 1));
-                player.getInventory().setLeggings(new ItemStack(Material.AIR, 1));
-                player.getInventory().setBoots(new ItemStack(Material.AIR, 1));
-                player.getInventory().removeItem(new ItemStack(Material.LEATHER_BOOTS, 1));
+                player.getInventory().setArmorContents(new ItemStack[4]);
+                player.getInventory().removeItem(new ItemStack(Material.DIAMOND_BOOTS, 1));
                 player.getInventory().removeItem(new ItemStack(Material.LEATHER_LEGGINGS, 1));
+                player.getInventory().removeItem(new ItemStack(Material.LEATHER_CHESTPLATE, 1));
                 player.getInventory().removeItem(new ItemStack(Material.LEATHER_HELMET, 1));
-                player.getInventory().removeItem(new ItemStack(Material.DIAMOND_CHESTPLATE, 1));
                 player.getInventory().addItem(colorArmor(new ItemStack(Material.LEATHER_HELMET, 1), Color.BLACK));
                 player.getInventory().addItem(colorArmor(new ItemStack(Material.LEATHER_CHESTPLATE, 1), WFP.getWFP(player).getCurrentTeam()));
                 player.getInventory().addItem(colorArmor(new ItemStack(Material.LEATHER_LEGGINGS, 1), Color.BLACK));
@@ -463,18 +460,16 @@ public class BattleRoyale extends Map {
 
     @EventHandler
     public void PotionsSplash(PotionSplashEvent event) {
-        event.setCancelled(true);
-        for (LivingEntity target : event.getAffectedEntities()) {
-            ArrayList<PotionEffect> effects = new ArrayList<PotionEffect>(event.getPotion().getEffects());
-            if (event.getEntity().getShooter().equals(target)) {
-                Player player = (Player) target;
-                if (effects.get(0).toString().startsWith("HEAL")) {
-                    player.sendMessage(ChatColor.RED + "You cannot heal yourself!");
-                } else {
-                    target.addPotionEffect(event.getPotion().getEffects().iterator().next());
+        WFP shooter = WFP.getWFP(((Player) event.getPotion().getShooter()));
+        boolean heal = false;
+        for (PotionEffect effect : event.getPotion().getEffects())
+            if (PotionEffectType.HEAL == effect.getType()) heal = true;
+        for (LivingEntity entity : event.getAffectedEntities()) {
+            if (entity instanceof Player) {
+                if ((entity.getName().equals(shooter.getName())) && heal) {
+                    shooter.sendMessage(com.sk89q.minecraft.util.commands.ChatColor.GRAY + "Your potion had no affect on yourself!");
+                    event.setIntensity(entity, 0);
                 }
-            } else {
-                target.addPotionEffect(event.getPotion().getEffects().iterator().next());
             }
         }
     }
