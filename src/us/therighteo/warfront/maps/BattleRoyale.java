@@ -461,12 +461,9 @@ public class BattleRoyale extends Map {
     @EventHandler
     public void PotionsSplash(PotionSplashEvent event) {
         WFP shooter = WFP.getWFP(((Player) event.getPotion().getShooter()));
-        boolean heal = false;
-        for (PotionEffect effect : event.getPotion().getEffects())
-            if (PotionEffectType.HEAL == effect.getType()) heal = true;
         for (LivingEntity entity : event.getAffectedEntities()) {
             if (entity instanceof Player) {
-                if ((entity.getName().equals(shooter.getName())) && heal) {
+                if ((entity.getName().equals(shooter.getName()))) {
                     shooter.sendMessage(com.sk89q.minecraft.util.commands.ChatColor.GRAY + "Your potion had no affect on yourself!");
                     event.setIntensity(entity, 0);
                 }
